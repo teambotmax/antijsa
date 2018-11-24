@@ -2025,13 +2025,13 @@ def bot(op):
                                    ko.removeAllMessages(op.param2)
                                    kk.removeAllMessages(op.param2)
                                    kc.removeAllMessages(op.param2)
+                                   ke.removeAllMessages(op.param2)
+                                   kf.removeAllMessages(op.param2
+                                   kg.removeAllMessages(op.param2)
+                                   kh.removeAllMessages(op.param2
                                    ki.removeAllMessages(op.param2)
-                                   kk.removeAllMessages(op.param2
-                                   ki.removeAllMessages(op.param2)
-                                   kk.removeAllMessages(op.param2
-                                   ki.removeAllMessages(op.param2)
-                                   kk.removeAllMessages(op.param2
-                                   ki.removeAllMessages(op.param2)
+                                   kj.removeAllMessages(op.param2
+                                   kl.removeAllMessages(op.param2)
                                    sw.removeAllMessages(op.param2
                                    cl.sendText(msg.to,"Chat dibersihkan...")
                                except:
@@ -2600,6 +2600,7 @@ def bot(op):
                                 kh.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kj.acceptGroupInvitationByTicket(msg.to,Ticket)
+                                kl.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kj.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
                                 kj.updateGroup(G)
@@ -2608,15 +2609,16 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
+                                ko.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
-                                kc.leaveGroup(msg.to)
-                                ke.leaveGroup(msg.to) 
+                                kc.leaveGroup(msg.to) 
+                                ke.leaveGroup(msg.to)
                                 kf.leaveGroup(msg.to)
                                 kg.leaveGroup(msg.to)
                                 kh.leaveGroup(msg.to)
                                 ki.leaveGroup(msg.to)
                                 kj.leaveGroup(msg.to)
-                                ko.leaveGroup(msg.to)
+                                kl.leaveGroup(msg.to)
                                 
                         elif cmd == "byeme":
                           if wait["selfbot"] == True:
@@ -3860,15 +3862,36 @@ def bot(op):
                                      group = cl.findGroupByTicket(ticket_id)
                                      cl.acceptGroupInvitationByTicket(group.id,ticket_id)
                                      cl.sendMessage(msg.to, "Masuk : %s" % str(group.name))
-                                     group1 = ki.findGroupByTicket(ticket_id)
-                                     ki.acceptGroupInvitationByTicket(group1.id,ticket_id)
-                                     ki.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group1 = ko.findGroupByTicket(ticket_id)
+                                     ko.acceptGroupInvitationByTicket(group1.id,ticket_id)
+                                     ko.sendMessage(msg.to, "Masuk : %s" % str(group.name))
                                      group2 = kk.findGroupByTicket(ticket_id)
                                      kk.acceptGroupInvitationByTicket(group2.id,ticket_id)
                                      kk.sendMessage(msg.to, "Masuk : %s" % str(group.name))
                                      group3 = kc.findGroupByTicket(ticket_id)
                                      kc.acceptGroupInvitationByTicket(group3.id,ticket_id)
                                      kc.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group4 = ke.findGroupByTicket(ticket_id)
+                                     ke.acceptGroupInvitationByTicket(group4.id,ticket_id)
+                                     ke.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group5 = kf.findGroupByTicket(ticket_id)
+                                     kf.acceptGroupInvitationByTicket(group5.id,ticket_id)
+                                     kf.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group6 = kg.findGroupByTicket(ticket_id)
+                                     kg.acceptGroupInvitationByTicket(group6.id,ticket_id)
+                                     kg.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group7 = kh.findGroupByTicket(ticket_id)
+                                     kh.acceptGroupInvitationByTicket(group7.id,ticket_id)
+                                     kh.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group8 = ki.findGroupByTicket(ticket_id)
+                                     ki.acceptGroupInvitationByTicket(group8.id,ticket_id)
+                                     ki.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group9 = kj.findGroupByTicket(ticket_id)
+                                     kj.acceptGroupInvitationByTicket(group9.id,ticket_id)
+                                     kj.sendMessage(msg.to, "Masuk : %s" % str(group.name))
+                                     group10 = kl.findGroupByTicket(ticket_id)
+                                     kl.acceptGroupInvitationByTicket(group10.id,ticket_id)
+                                     kl.sendMessage(msg.to, "Masuk : %s" % str(group.name))
 
     except Exception as error:
         print (error)

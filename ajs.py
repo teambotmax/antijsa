@@ -654,6 +654,15 @@ def bot(op):
                     else:
                         kj.acceptGroupInvitation(op.param1)
                         ginfo = kj.getGroup(op.param1)
+            if Jmid in op.param3:
+                if wait["autoJoin"] == True:
+                    if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
+                        kl.acceptGroupInvitation(op.param1)
+                        ginfo = kl.getGroup(op.param1)
+                        kl.leaveGroup(op.param1)
+                    else:
+                        kl.acceptGroupInvitation(op.param1)
+                        ginfo = kl.getGroup(op.param1)
 
         if op.type == 13:
             if op.param1 in protectinvite:
@@ -2559,16 +2568,24 @@ def bot(op):
                                 kh.sendMessage(msg.to,responsename7)
                                 ki.sendMessage(msg.to,responsename8)
                                 kj.sendMessage(msg.to,responsename9)
+                                kl.sendMessage(msg.to,responsename10)
 
                         elif cmd == "invitebot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
-                                    anggota = [Bmid,Cmid,Amid]
+                                    anggota = [Amid,Bmid,Cmid,Emid,Fmid,Gmid,Hmid,Imid,Jmid]
                                     cl.inviteIntoGroup(msg.to, anggota)
+                                    ko.acceptGroupInvitation(msg.to)
                                     kk.acceptGroupInvitation(msg.to)
                                     kc.acceptGroupInvitation(msg.to)
+                                    ke.acceptGroupInvitation(msg.to)
+                                    kf.acceptGroupInvitation(msg.to)
+                                    kg.acceptGroupInvitation(msg.to)
+                                    kh.acceptGroupInvitation(msg.to)
                                     ki.acceptGroupInvitation(msg.to)
+                                    kj.acceptGroupInvitation(msg.to)
+                                    kl.acceptGroupInvitation(msg.to)
                                 except:
                                     pass
                                 
@@ -2601,9 +2618,9 @@ def bot(op):
                                 ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kj.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kl.acceptGroupInvitationByTicket(msg.to,Ticket)
-                                G = kj.getGroup(msg.to)
+                                G = kl.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
-                                kj.updateGroup(G)
+                                kl.updateGroup(G)
 
                         elif cmd == "byeall":
                           if wait["selfbot"] == True:
@@ -2634,10 +2651,17 @@ def bot(op):
                                 for i in gid:
                                     h = cl.getGroup(i).name
                                     if h == ng:
-                                        ki.sendMessage(i, "Silahkan admin invite atau masukan kembali")
-                                        ki.leaveGroup(i)
+                                        ko.sendMessage(i, "Silahkan admin invite atau masukan kembali")
+                                        ko.leaveGroup(i)
                                         kk.leaveGroup(i)
                                         kc.leaveGroup(i)
+                                        ke.leaveGroup(i)
+                                        kf.leaveGroup(i)
+                                        kg.leaveGroup(i)
+                                        kh.leaveGroup(i)
+                                        ki.leaveGroup(i)
+                                        kj.leaveGroup(i)
+                                        kl.leaveGroup(i)
                                         cl.sendMessage(to,"Berhasil keluar dari grup " +h)
 
                         elif cmd == "assist1":
@@ -3131,9 +3155,17 @@ def bot(op):
                               if jumlah <= 1000:
                                   for var in range(0,jumlah):
                                       cl.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
-                                      ki.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      ko.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                                       kk.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                                       kc.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      ke.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      kf.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      kg.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      kh.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      ki.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      kj.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      kl.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      sw.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
 
                         elif 'Spam: ' in msg.text:
                           if wait["selfbot"] == True:
@@ -3145,9 +3177,17 @@ def bot(op):
                               if jumlah <= 1000:
                                   for var in range(0,jumlah):
                                       cl.sendMessage(midd, str(Setmain["ARmessage1"]))
-                                      ki.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      ko.sendMessage(midd, str(Setmain["ARmessage1"]))
                                       kk.sendMessage(midd, str(Setmain["ARmessage1"]))
                                       kc.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      ke.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      kf.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      kg.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      kh.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      ki.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      kj.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      kl.sendMessage(midd, str(Setmain["ARmessage1"]))
+                                      sw.sendMessage(midd, str(Setmain["ARmessage1"]))
 
                         elif 'ID line: ' in msg.text:
                           if wait["selfbot"] == True:

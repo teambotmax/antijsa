@@ -2065,13 +2065,13 @@ def bot(op):
                                    kk.removeAllMessages(op.param2)
                                    kc.removeAllMessages(op.param2)
                                    ke.removeAllMessages(op.param2)
-                                   kf.removeAllMessages(op.param2
+                                   kf.removeAllMessages(op.param2)
                                    kg.removeAllMessages(op.param2)
-                                   kh.removeAllMessages(op.param2
+                                   kh.removeAllMessages(op.param2)
                                    ki.removeAllMessages(op.param2)
-                                   kj.removeAllMessages(op.param2
+                                   kj.removeAllMessages(op.param2)
                                    kl.removeAllMessages(op.param2)
-                                   sw.removeAllMessages(op.param2
+                                   sw.removeAllMessages(op.param2)
                                    cl.sendText(msg.to,"Chat dibersihkan...")
                                except:
                                    pass
